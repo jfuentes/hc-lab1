@@ -1,11 +1,11 @@
 /*********************************
 * Lab 1 - Heterogeneous Computing 
-* Fall 2021
+* Spring 2021
 **********************************/
 
 #include <CL/sycl.hpp>
 
-constexpr int N=50;
+constexpr int N = 50;
 using namespace sycl;
 
 int main(){
@@ -23,13 +23,13 @@ int main(){
     buffer buff(B);
     buffer buff(C);
 
-    // kernel submission on device hardware
+    // kernel submission to hardware device
     q.submit([&](handler& h){
         // Add your code here
     };
 
     for (int i=0; i<N; i++) 
-		std::cout << v[i] << " ";
+		    std::cout << v[i] << " ";
     std::cout << std::endl;
 
 	return 0;
